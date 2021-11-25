@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class UIMenu {
 
-    public final static String [] MONTHS = {
+    public static final  String [] MONTHS = {
             "Enero",
             "Febrero",
             "Marzo",
