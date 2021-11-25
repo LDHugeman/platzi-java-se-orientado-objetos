@@ -12,6 +12,19 @@ public class Doctor extends User{
         System.out.println("El nombre del Model.Doctor asignado es: " + name);
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\n Speciality: " + speciality +
+                "\n Available: " + availableAppointments.toString();
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Empleado del Hospital: Cruz Roja");
+        System.out.println("Departamento: Cancerología");
+    }
+
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void addAvailableAppointment(Date date, String time){
         availableAppointments.add(new AvailableAppointment(date, time));
@@ -69,12 +82,5 @@ public class Doctor extends User{
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() +
-                "\n Speciality: " + speciality +
-                "\n Available: " + availableAppointments.toString();
     }
 }

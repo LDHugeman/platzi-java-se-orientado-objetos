@@ -1,6 +1,6 @@
 package Model;
 
-public class User {
+public abstract class User {
     private int id;
     private String name;
     private String email;
@@ -11,6 +11,14 @@ public class User {
         this.name = name;
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Model.User: " + name + ", Email: " + email +
+                "\n Address: " + address + ", Phone: "+ phoneNumber;
+    }
+
+    public abstract void showDataUser();
 
     public int getId() {
         return id;
@@ -54,11 +62,5 @@ public class User {
         } else if(phoneNumber.length() == 8){
             this.phoneNumber = phoneNumber;
         }
-    }
-
-    @Override
-    public String toString() {
-       return "Model.User: " + name + ", Email: " + email +
-               "\n Address: " + address + ", Phone: "+ phoneNumber;
     }
 }

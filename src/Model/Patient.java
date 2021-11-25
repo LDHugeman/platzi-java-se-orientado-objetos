@@ -10,6 +10,21 @@ public class Patient extends User{
         super(name, email);
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\n Age: " + birthday +
+                "\n Weight: " + getWeight() +
+                "\n Height: " + getHeight() +
+                "\n Blood: " + blood;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Historial completo desde nacimiento");
+    }
+
     public String getBirthday() {
         return birthday;
     }
@@ -40,14 +55,5 @@ public class Patient extends User{
 
     public void setBlood(String blood) {
         this.blood = blood;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() +
-                "\n Age: " + birthday +
-                "\n Weight: " + getWeight() +
-                "\n Height: " + getHeight() +
-                "\n Blood: " + blood;
     }
 }
