@@ -1,21 +1,13 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    static int id = 0;
-    private String name;
-    private String email;
+public class Doctor extends User{
+
     private String speciality;
 
-    Doctor(){
-        System.out.println("Construyendo el Objeto Doctor");
-    }
-
-    Doctor(String name, String speciality){
-        id++;
+    Doctor(String name, String email){
+        super(name, email);
         System.out.println("El nombre del Doctor asignado es: " + name);
-        this.name = name;
-        this.speciality = speciality;
     }
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
@@ -25,14 +17,6 @@ public class Doctor {
 
     public ArrayList<AvailableAppointment> getAvailableAppointments() {
         return availableAppointments;
-    }
-
-    public void showName(){
-        System.out.println(name);
-    }
-
-    public void showId(){
-        System.out.println("ID Doctor: " + id);
     }
 
     public static class AvailableAppointment{
@@ -68,22 +52,6 @@ public class Doctor {
         public void setTime(String time) {
             this.time = time;
         }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getSpeciality() {

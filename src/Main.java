@@ -18,7 +18,9 @@ public class Main {
         System.out.println();
 
         Patient patient = new Patient("Alejandra","alejandra@mail.com");
-        Patient patient2 = new Patient("Anahí","anahi@mail.com");
+        System.out.println(patient);
+
+        /*Patient patient2 = new Patient("Anahí","anahi@mail.com");
         System.out.println(patient.getName());
         System.out.println(patient2.getName());
         patient2 = patient;
@@ -28,7 +30,7 @@ public class Main {
 
         patient2.setName("Manuel");
         System.out.println(patient.getName());
-        System.out.println(patient2.getName());
+        System.out.println(patient2.getName());*/
     }
 
     /*public enum Day {
