@@ -81,6 +81,7 @@ public class UIMenu {
                     if(doctor.getEmail().equals(email)){
                         emailCorrect = true;
                         doctorLogged = doctor;
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
