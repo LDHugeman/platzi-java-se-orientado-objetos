@@ -65,7 +65,7 @@ public class UIDoctorMenu {
                 int responseTime = 0;
                 String time = "";
                 do {
-                    System.out.println("Insert the time available for date: " + date + "[16:00]");
+                    System.out.println("Insert the time available for date: " + date + " [16:00]");
                     time = scanner.nextLine();
                     System.out.println("Your time is: " + time +
                             "\n1. Correct" +
